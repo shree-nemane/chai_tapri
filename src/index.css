@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: contentFont;
+    src: url(../public/fonts/CALVINN.TTF);
+}
