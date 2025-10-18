@@ -4,9 +4,9 @@ import './index.css'
 import Home from './page/Home'
 import About from './page/About'
 import WhyUs from './page/WhyUs'
-import MakeMyTeaSection from './page/MakeMyTeaSection'
+import MakeMyTea from './page/MakeMyTea'
 import Gallery from './page/Gallery'
-import TestimonialSection from './page/TestimonialSection'
+import Testimonial from './page/Testimonial'
 import Contact from './page/Contact'
 
 const App = () => {
@@ -15,9 +15,9 @@ const App = () => {
       <Home />
       <About />
       <WhyUs />
-      <MakeMyTeaSection />
+      <MakeMyTea />
       <Gallery />
-      <TestimonialSection />
+      <Testimonial />
       <Contact />
     </div>
   )
