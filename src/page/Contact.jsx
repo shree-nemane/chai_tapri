@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import autoRickshawBottom from '../assets/rickshaw.png';
 import hornPleaseLogo from '../assets/horn_ok_plz.png';
@@ -39,6 +39,8 @@ const SocialTextIcon = ({ char, color, href }) => (
 );
 
 const Contact = () => {
+  const [submitted, setSubmitted] = useState(false);
+
   return (
     <div id="contact" className="min-h-screen bg-[#0D5152] p-4 pt-8 md:px-10 relative overflow-hidden font-[contentFont]">
       <div className="max-w-4xl mx-auto z-20 pt-8 relative">
@@ -48,29 +50,41 @@ const Contact = () => {
           CONTACT
         </h1>
 
-        {/* Form (Formspree integration) */}
-        <form
-          className="grid grid-cols-2 gap-x-4 sm:gap-x-8"
-          action="https://formspree.io/f/yourFormID" // <-- Replace with your Formspree form ID
-          method="POST"
-        >
-          <FormInput label="Name :" />
-          <FormInput label="Email :" type="email" />
-          <FormInput label="Ph./Tel." />
-          <FormInput label="Address :" />
-          <FormInput label="Message :" isTextarea fullWidth />
+        {!submitted ? (
+          // Form (Formspree integration)
+          <form
+            className="grid grid-cols-2 gap-x-4 sm:gap-x-8"
+            action="https://formspree.io/f/your-form-id"
+            method="POST"
+            onSubmit={() => setSubmitted(true)} // sets submitted state on submit
+          >
+            <FormInput label="Name :" />
+            <FormInput label="Email :" type="email" />
+            <FormInput label="Ph./Tel." />
+            <FormInput label="Address :" />
+            <FormInput label="Message :" isTextarea fullWidth />
 
-          {/* Send Button */}
-          <div className="col-span-2 flex justify-center">
-            <button type="submit" className="cursor-pointer hover:scale-105 transition-transform">
-              <img
-                src={sendKeyIcon}
-                alt="Send Icon"
-                className="w-36 sm:w-44 md:w-48"
-              />
-            </button>
+            {/* Send Button */}
+            <div className="col-span-2 flex justify-center">
+              <button type="submit" className="cursor-pointer hover:scale-105 transition-transform">
+                <img
+                  src={sendKeyIcon}
+                  alt="Send Icon"
+                  className="w-36 sm:w-44 md:w-48"
+                />
+              </button>
+            </div>
+          </form>
+        ) : (
+          // Thank You Note
+          <div className="bg-gray-900/50 border border-yellow-400 rounded-lg p-8 text-center flex flex-col items-center justify-center">
+            <h2 className="text-3xl sm:text-4xl font-[headerFont] text-yellow-400 mb-4">Thank You!</h2>
+            <p className="text-white text-lg sm:text-xl font-[contentFont]">
+              Your message has been successfully sent.
+            </p>
+            <p className="text-white mt-2 text-md sm:text-lg">We will get back to you shortly.</p>
           </div>
-        </form>
+        )}
 
         {/* Contact Info Section */}
         <div className="flex flex-col md:flex-row items-center justify-center md:items-end md:justify-between space-y-8 md:space-y-0 md:space-x-4 mt-16 mb-12">
