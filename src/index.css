@@ -2,5 +2,15 @@
 
 @font-face {
     font-family: contentFont;
+    src: url(../public/fonts/joffrey.ttf);
+}
+
+@font-face {
+    font-family: titleFont;
     src: url(../public/fonts/CALVINN.TTF);
+}
+
+@font-face {
+    font-family: headerFont;
+    src: url(../public/fonts/DESYREL.ttf);
 }

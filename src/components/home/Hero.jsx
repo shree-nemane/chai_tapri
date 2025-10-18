@@ -1,28 +1,29 @@
 import React from 'react';
 
 const Hero = ({ chaiImage }) => {
-    return (
-        // Using <main> tag is semantically correct for the primary page content.
-        <main className="flex-grow flex flex-col md:flex-row items-center justify-center md:justify-evenly p-4 text-center md:text-left">
-            
-            {/* Title */}
-            <div className="font-[contentFont] text-white flex flex-col items-center md:items-start drop-shadow-lg">
-                <h1 className="text-6xl sm:text-7xl lg:text-8xl xl:text-9xl sm:flex sm:flex-col sm:self-start font-bold tracking-tighter">
-                    <span className="block">Chai से</span>
-                    <span className="block mt-2 md:mt-4">SHuRuVaat</span>
-                </h1>
-            </div>
+  return (
+    // Main content area (semantic and responsive)
+    <main className="flex-grow flex flex-col md:flex-row items-center justify-center md:justify-evenly px-4 sm:px-8 py-8 sm:py-12 text-center md:text-left">
+      
+      {/* Title Section */}
+      <div className="font-[titleFont] text-white flex flex-col items-center md:items-start drop-shadow-lg">
+        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-bold tracking-wide leading-tight">
+          <span className="block">Chai से</span>
+          <span className="block mt-2 sm:mt-3 md:mt-4 lg:mt-6">SHuRuVaat</span>
+        </h1>
+      </div>
 
-            {/* Chai Image */}
-            <div className="mt-8 md:mt-0">
-                <img 
-                    className="w-48 sm:w-64 lg:w-80 xl:w-96 drop-shadow-2xl"
-                    src={chaiImage} 
-                    alt="A warm cup of chai tea" 
-                />
-            </div>
-        </main>
-    );
+      {/* Image Section */}
+      <div className="mt-8 md:mt-0 flex justify-center md:justify-end">
+        <img
+          className="w-40 sm:w-56 md:w-64 lg:w-80 xl:w-96 drop-shadow-2xl transition-transform duration-500 hover:scale-105"
+          src={chaiImage}
+          alt="A warm cup of chai tea"
+          loading="lazy"
+        />
+      </div>
+    </main>
+  );
 };
 
 export default Hero;

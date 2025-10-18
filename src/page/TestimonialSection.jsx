@@ -1,54 +1,84 @@
 import React from 'react';
-
+import Slider from 'react-slick';
 import truckImg from '../assets/truck.png';
+import 'slick-carousel/slick/slick.css';
+import 'slick-carousel/slick/slick-theme.css';
+
+// Sample testimonials array
+const testimonials = [
+  {
+    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    author: "Sandra John",
+  },
+  {
+    quote: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    author: "Michael Smith",
+  },
+  {
+    quote: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    author: "Emma Watson",
+  },
+];
 
 const TestimonialSection = () => {
-    return (
-        // --- MAIN CONTAINER ---
-        // A semantic <section> tag with a vibrant green background.
-        // 'relative' is needed to position the decorative shapes inside.
-        // 'overflow-hidden' clips the parts of the shapes that are outside the container.
-        <section className="relative w-full overflow-visible  font-[contentFont] bg-green-500 font-heading text-white">
+  // Slider settings
+  const settings = {
+    dots: true,
+    arrows: false,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    speed: 600,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight: true,
+  };
 
-            {/* --- DECORATIVE SHAPES --- */}
-            {/* These are positioned absolutely relative to the main container. */}
-            {/* Hidden on extra-small screens to avoid clutter. */}
-            <div className="absolute top-24 left-24 z-0 hidden sm:block">
-                <div className="h-32 w-32 rounded-full bg-green-600 opacity-50" />
-            </div>
+  return (
+    <section className="relative w-full overflow-visible pt-8 font-[contentFont] bg-[#4EB73E] font-heading text-white">
+      {/* Decorative Shapes */}
+      <div className="absolute top-24 left-36 z-0 hidden sm:block">
+        <div className="h-32 w-32 rounded-full bg-green-600 opacity-50" />
+      </div>
+      <div className="absolute bottom-24 right-24 z-0 hidden sm:block">
+        <div className="h-40 w-40 rounded-full bg-green-600 opacity-50" />
+      </div>
 
-            <div className="absolute bottom-24 right-24 z-0 hidden sm:block">
-                <div className="h-40 w-40 rounded-full bg-green-600 opacity-50" />
-            </div>
+      {/* Content Wrapper */}
+      <div className="container relative z-10 mx-auto max-w-4xl px-4 py-16 md:py-24 text-center">
+        {/* Title */}
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-[headerFont] tracking-wider">
+          TESTIMONIAL
+        </h2>
 
-            {/* --- CONTENT WRAPPER --- */}
-            {/* 'z-10' ensures the content is on top of the decorative shapes. */}
-            <div className="container relative z-10 mx-auto max-w-4xl px-4 py-16 text-center md:py-24">
+        {/* Slider */}
+        <div className="mt-8">
+          <Slider {...settings}>
+            {testimonials.map((item, index) => (
+              <blockquote key={index} className="px-4 sm:px-6">
+                <p className="text-lg sm:text-xl md:text-2xl leading-relaxed">
+                  "{item.quote}"
+                </p>
+                <footer className="mt-4 sm:mt-6 text-lg sm:text-xl text-right">
+                  - {item.author}
+                </footer>
+              </blockquote>
+            ))}
+          </Slider>
+        </div>
+      </div>
 
-                {/* Title */}
-                <h2 className="text-4xl font-bold tracking-wider md:text-5xl">
-                    TESTIMONIAL
-                </h2>
-
-                {/* Testimonial Quote */}
-                <blockquote className="mt-8">
-                    <p className="text-lg leading-relaxed md:text-xl">
-                        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-                    </p>
-
-                    {/* Author */}
-                    <footer className="mt-6 text-right text-lg">
-                        - Sandra John
-                    </footer>
-                </blockquote>
-            </div>
-
-            <div className="absolute right-4 md:right-12 bottom-0 transform translate-y-1/2 z-30 pointer-events-none">
-                <img src={truckImg} alt="Illustration of a red bus" className="w-48 md:w-full max-w-[25vh]" />
-            </div>
-
-        </section>
-    );
+      {/* Decorative Truck */}
+      <div className="absolute right-2 md:right-12 bottom-0 transform translate-y-1/2 z-30 pointer-events-none">
+        <img
+          src={truckImg}
+          alt="Illustration of a red bus"
+          className="w-32 md:w-48 max-w-[25vh]"
+          loading="lazy"
+        />
+      </div>
+    </section>
+  );
 };
 
 export default TestimonialSection;

@@ -1,51 +1,66 @@
-import React from 'react'
+import React from 'react';
 
-import chiliLemonImg from '../assets/lemon.png';
-import busImg from '../assets/bus.png';
 import trumpetImg from '../assets/trumpet.png';
-import trophyIcon from '../assets/trophy.png';
-import ribbonIcon from '../assets/trophy.png';
-import starIcon from '../assets/trophy.png';
-import heartIcon from '../assets/trophy.png';
-
+import trophyIcon from '../assets/trophy_final.png';
+import ribbonIcon from '../assets/trophy_final.png';
+import starIcon from '../assets/trophy_final.png';
+import heartIcon from '../assets/trophy_final.png';
 
 const whyUsItems = [
-    { icon: trophyIcon, text: 'Award Winning' },
-    { icon: ribbonIcon, text: 'Certified Quality' },
-    { icon: starIcon, text: 'Top Rated' },
-    { icon: heartIcon, text: 'Loved by Customers' },
+  { icon: trophyIcon, text: 'Award Winning' },
+  { icon: ribbonIcon, text: 'Certified Quality' },
+  { icon: starIcon, text: 'Top Rated' },
+  { icon: heartIcon, text: 'Loved by Customers' },
 ];
 
 const WhyUs = () => {
-    return (
-        <section className="w-full bg-white font-[contentFont] pt-24 pb-12 md:pt-32 md:pb-20 px-4 sm:px-6 lg:px-8">
-            <div className="container mx-auto">
-                {/* Section Title */}
-                <div className="flex justify-center items-center gap-4 mb-12">
-                    <img src={trumpetImg} alt="trumpet icon" className="w-16 transform -scale-x-100" />
-                    <h2 className="font-heading text-4xl md:text-5xl text-gray-800 tracking-wide">
-                        Why US
-                    </h2>
-                    <img src={trumpetImg} alt="trumpet icon" className="w-16" />
-                </div>
+  return (
+    <section id="whyus" className="w-full bg-white font-[contentFont] pt-20 md:pt-24 pb-12 md:pb-20 px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto">
+        {/* Section Title */}
+        <div className="flex justify-center items-center gap-4 mb-10">
+          <img
+            src={trumpetImg}
+            alt="Left trumpet icon"
+            className="w-12 sm:w-16 md:w-20 lg:w-24 transform -scale-x-100 drop-shadow-md"
+            loading="lazy"
+          />
+          <h2 className="font-[headerFont] text-3xl sm:text-4xl md:text-5xl text-gray-800 tracking-wide">
+            WHY US
+          </h2>
+          <img
+            src={trumpetImg}
+            alt="Right trumpet icon"
+            className="w-12 sm:w-16 md:w-20 lg:w-24 drop-shadow-md"
+            loading="lazy"
+          />
+        </div>
 
-                {/* Icons Grid */}
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-12">
-                    {whyUsItems.map((item, index) => (
-                        <div key={index} className="flex flex-col items-center text-center">
-                            {/* Icon container with decorative style */}
-                            <div className="bg-gray-50 w-32 h-32 md:w-40 md:h-40 flex items-center justify-center p-4 rounded-[35%] border-2 border-dashed border-gray-200">
-                                <img src={item.icon} alt={item.text} className="w-16 h-16 md:w-20 md:h-20 object-contain" />
-                            </div>
-                            <p className="mt-4 font-heading text-lg text-amber-800">
-                                {item.text}
-                            </p>
-                        </div>
-                    ))}
-                </div>
+        {/* Icons Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-10 lg:gap-12">
+          {whyUsItems.map((item, index) => (
+            <div
+              key={index}
+              className="flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+            >
+              {/* Icon Container */}
+              <div className="flex items-center justify-center w-36 h-36 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-56 lg:h-56 p-4">
+                <img
+                  src={item.icon}
+                  alt={item.text}
+                  className="w-full h-full object-contain drop-shadow-lg"
+                  loading="lazy"
+                />
+              </div>
+              <p className="mt-4 text-base sm:text-lg md:text-xl font-semibold text-amber-800">
+                {item.text}
+              </p>
             </div>
-        </section>
-    );
+          ))}
+        </div>
+      </div>
+    </section>
+  );
 };
 
-export default WhyUs
+export default WhyUs;

@@ -1,11 +1,11 @@
-import React from 'react'
+import React, { memo } from 'react';
 
-import horeseImg from '../assets/horse.png'
-import tea1 from '../assets/tea1.jpg'
-import tea2 from '../assets/tea2.jpg'
-import tea3 from '../assets/tea3.jpg'
-import trumpet from '../assets/trumpet.png';
-
+// --- ASSETS ---
+import horseImg from '../assets/horse.png';
+import tea1 from '../assets/tea1.jpg';
+import tea2 from '../assets/tea2.jpg';
+import tea3 from '../assets/tea3.jpg';
+import read_more from '../assets/read_more.png';
 
 const galleryImages = [
     { id: 1, src: tea1, alt: 'A modern tea shop interior' },
@@ -20,90 +20,84 @@ const galleryImages = [
 
 const Gallery = () => {
     return (
-        // 1. IMPROVED: Used a darker shade for better visual depth and kept the font class.
-        <div className='relative w-full font-[contentFont] bg-teal-600 p-4 md:p-8 overflow-visible'>
-            
-            {/* Gallery Header */}
-            {/* 2. IMPROVED: Added responsive text sizing (md:text-5xl) and ensured drop-shadow. */}
-            <div className='flex w-full justify-center items-center gap-4 mt-12 mb-8 text-4xl md:text-5xl font-bold text-yellow-800 drop-shadow-md'>
-                
-                <img 
-                    // 3. IMPROVED: Added responsive width (sm:w-20) and loading="lazy".
-                    className='w-24 sm:w-20' 
-                    src={horeseImg} 
+        <section id="gallery" className="relative w-full font-[contentFont] bg-[#16B89F] py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 overflow-visible">
+
+            {/* --- HEADER --- */}
+            <div className="flex w-full justify-center items-center gap-4 mb-8 md:mb-12 text-4xl md:text-5xl font-bold text-yellow-800 drop-shadow-md">
+                <img
+                    className="w-16 sm:w-20 lg:w-24"
+                    src={horseImg}
                     alt="Decorative horse illustration"
-                    loading="lazy" 
-                />
-                
-                <div>Gallery</div>
-                
-                <img 
-                    // 4. PRESERVED: Keeping the original class, assuming '-rotate-y-180' is a custom utility in your Tailwind config.
-                    // 5. IMPROVED: Added responsive width and loading="lazy".
-                    className='w-24 sm:w-20 -rotate-y-180' 
-                    src={horeseImg} 
-                    alt="Decorative horse illustration (flipped)" 
                     loading="lazy"
+                    decoding="async"
+                />
+
+                <h2 className="font-[headerFont] text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                    GALLERY
+                </h2>
+
+                <img
+                    className="w-16 sm:w-20 lg:w-24 scale-x-[-1]"
+                    src={horseImg}
+                    alt="Decorative horse illustration (mirrored)"
+                    loading="lazy"
+                    decoding="async"
                 />
             </div>
 
-            {/* Gallery Grid */}
-            {/* 6. IMPROVED: Increased max width for better desktop view and added an intermediate breakpoint (sm:grid-cols-3) for smoother transition. */}
-            <div className="container mx-auto max-w-6xl sm:px-4 lg:px-8 grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
-
-                {/* We map over the galleryImages array to render each image dynamically. */}
+            {/* --- GALLERY GRID --- */}
+            <div
+                role="list"
+                className="container mx-auto max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4"
+            >
                 {galleryImages.map((image) => (
-                    // 7. IMPROVED: Added 'group' for consistent hover effects across the card.
-                    <div key={image.id} className="group overflow-hidden aspect-square shadow-xl">
+                    <div
+                        key={image.id}
+                        role="listitem"
+                        className="group overflow-hidden aspect-square shadow-xl "
+                    >
                         <img
                             src={image.src}
                             alt={image.alt}
-                            loading="lazy" // 8. OPTIMIZATION: Added lazy loading for performance.
-                            className="
-                                w-full h-full object-cover transform            
-                                filter grayscale            
-                                cursor-pointer             
-                                transition-all duration-300 ease-in-out
-                                group-hover:grayscale-0          
-                                group-hover:scale-[1.07]            
-                            "
+                            loading="lazy"
+                            decoding="async"
+                            fetchpriority="low"
+                            className="w-full h-full object-cover transform filter grayscale cursor-pointer transition-all duration-300 ease-in-out group-hover:grayscale-0 group-hover:scale-105"
                         />
                     </div>
                 ))}
             </div>
-            
-            {/* More... Link */}
-            <div className='flex justify-end'>
+
+            {/* --- READ MORE LINK --- */}
+            <div className="flex justify-end">
                 <a
-                href="#"
-                // 9. IMPROVED: Added responsive font size (md:text-3xl) and right padding (pr-4) for spacing.
-                className="inline-flex  items-center  mt-8 md:mt-10  text-2xl md:text-3xl text-white hover:text-yellow-200 transition-colors duration-300 drop-shadow-md pr-4"
-            >
-                <img 
-                    src={trumpet} 
-                    alt="Trumpet icon for More info" 
-                    // 10. IMPROVED: Added responsive width and loading="lazy".
-                    className="w-16 md:w-20 mr-2" 
-                    loading="lazy"
-                />
-                More...
-            </a>
-            </div>
-            
-
-            {/* Absolute Horse Image */}
-            <div className="absolute left-4 md:left-12 bottom-0 transform translate-y-1/2 z-10 pointer-events-none">
-                <img 
-                    src={horeseImg} 
-                    alt="Decorative horse element" 
-                    // 11. IMPROVED: Added responsive width and kept your custom rotation classes.
-                    className="w-40 sm:w-48 -rotate-y-180 rotate-z-10 lg:max-w-[35vh]" 
-                    loading="lazy"
-                />
+                    href="#"
+                    aria-label="View more gallery items"
+                    className="inline-flex items-center mt-8 md:mt-10 drop-shadow-md pr-4"
+                >
+                    <img
+                        src={read_more}
+                        alt="Read more icon"
+                        className="w-36 sm:w-48"
+                        loading="lazy"
+                        decoding="async"
+                    />
+                </a>
             </div>
 
-        </div>
-    )
-}
+            {/* --- DECORATIVE HORSE (BOTTOM LEFT) --- */}
+            <div className="absolute left-4 md:left-12 bottom-0 translate-y-1/2 z-10 pointer-events-none">
+                <img
+                    src={horseImg}
+                    alt=""
+                    aria-hidden="true"
+                    className="w-28 sm:w-36 lg:w-[35vh] scale-x-[-1] -rotate-[10deg]"
+                    loading="lazy"
+                    decoding="async"
+                />
+            </div>
+        </section>
+    );
+};
 
-export default Gallery
+export default memo(Gallery);

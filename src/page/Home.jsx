@@ -7,21 +7,24 @@ import Hero from '../components/home/Hero';
 // Import assets
 import brickWallimg from '../assets/home/brick_wall.jpg';
 import logoImg from '../assets/home/logo.jpg';
-import chaiImg from '../assets/home/chai_illustration.png';
+import chaiImg from '../assets/chai_cup.png';
 
 const Home = () => {
   return (
-    // Main container with background
+    // Main background container
     <div
-      className='relative w-full h-[100vh] bg-cover bg-center text-white'
+      className="relative w-full min-h-screen bg-cover bg-center text-white overflow-hidden"
       style={{ backgroundImage: `url(${brickWallimg})` }}
     >
-      {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black opacity-30" />
+      {/* Overlay for readability */}
+      <div className="absolute inset-0 bg-black/40" />
 
-      {/* Content wrapper that sits above the overlay */}
-      <div className="relative z-10 flex h-full flex-col">
+      {/* Content Wrapper */}
+      <div className="relative z-10 flex flex-col min-h-screen">
+        {/* Header */}
         <Header logo={logoImg} />
+
+        {/* Hero Section */}
         <Hero chaiImage={chaiImg} />
       </div>
     </div>
