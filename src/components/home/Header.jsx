@@ -1,5 +1,6 @@
 import React from 'react';
 import wood_texture from '../../assets/wood.jpg';
+import Logo from '../../assets/Logo.png'
 
 // Navigation links
 const navLinks = [
@@ -48,11 +49,11 @@ const Header = ({ logo }) => {
       </div> */}
 
       {/* Optional Image Logo (commented) */}
-      {/* md:-top-10 add  */}
-      <div className="absolute right-4 top-0 p-4 md:p-0 md:right-12  transform md:translate-y-1/12 z-10 pointer-events-none"> 
+      {/*  add  */}
+      <div className="absolute right-4 top-0 p-4 md:p-0 md:right-12 md:-top-12 transform md:translate-y-1/12 z-10 pointer-events-none"> 
         <img
-          className="w-24 h-24 md:w-36 md:h-36 rounded-full object-cover border-2 border-[#B77729] shadow-md"
-          src={logo}
+          className="w-24 h-24 md:w-40 md:h-40 rounded-full bg-white object-contain border-2 border-[#B77729] shadow-md"
+          src={Logo}
           alt="Chai se Shuruvaat Logo"
         />
       </div> 

@@ -13,7 +13,7 @@ const About = () => {
           <img
             src={chiliLemonImg}
             alt="Illustration of chilies and a lemon"
-            className="w-36 sm:w-44 md:w-72 rotate-[-5deg] drop-shadow-md transition-transform duration-300 hover:scale-105"
+            className="w-[30vw] md:w-60 lg:w-70  rotate-[-5deg] drop-shadow-md transition-transform duration-300 hover:scale-105"
             loading="lazy"
           />
         </div>

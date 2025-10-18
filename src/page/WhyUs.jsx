@@ -44,7 +44,7 @@ const WhyUs = () => {
               className="flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
             >
               {/* Icon Container */}
-              <div className="flex items-center justify-center w-36 h-36 sm:w-36 sm:h-36 md:w-44 md:h-44 lg:w-56 lg:h-56 p-4">
+              <div className="flex items-center justify-center w-48 h-48 sm:w-48 sm:h-48 md:w-44 md:h-44 lg:w-56 lg:h-56 p-4">
                 <img
                   src={item.icon}
                   alt={item.text}
@@ -52,7 +52,7 @@ const WhyUs = () => {
                   loading="lazy"
                 />
               </div>
-              <p className="mt-4 text-base sm:text-lg md:text-xl font-semibold text-amber-800">
+              <p className="mt-4 text-lg sm:text-lg md:text-2xl font-semibold text-amber-800">
                 {item.text}
               </p>
             </div>

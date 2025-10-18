@@ -23,7 +23,7 @@ const Gallery = () => {
         <section id="gallery" className="relative w-full font-[contentFont] bg-[#16B89F] py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 overflow-visible">
 
             {/* --- HEADER --- */}
-            <div className="flex w-full justify-center items-center gap-4 mb-8 md:mb-12 text-4xl md:text-5xl font-bold text-yellow-800 drop-shadow-md">
+            <div className="flex w-full justify-center items-center gap-4 mb-8 md:mb-12 text-4xl md:text-5xl drop-shadow-md">
                 <img
                     className="w-16 sm:w-20 lg:w-24"
                     src={horseImg}
@@ -32,7 +32,7 @@ const Gallery = () => {
                     decoding="async"
                 />
 
-                <h2 className="font-[headerFont] text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
+                <h2 className="font-[headerFont] text-white text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl">
                     GALLERY
                 </h2>
 
