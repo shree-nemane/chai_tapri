@@ -1,6 +1,6 @@
 import React from 'react';
 import wood_texture from '../../assets/home/wood.jpg';
-import Logo from '../../assets/home/Logo.jpg'
+import Logo from '../../assets/home/logo.jpg'
 
 // Navigation links
 const navLinks = [
