@@ -35,7 +35,7 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="relative w-full overflow-visible h-[55vh] pt-8 font-[contentFont] bg-[#4EB73E] font-heading text-white">
+    <section className="relative w-full overflow-visible pt-8 font-[contentFont] bg-[#4EB73E] font-heading text-white">
       {/* Decorative Shapes */}
       <div className="absolute top-24 left-36 z-0 hidden sm:block">
         <div className="h-32 w-32 rounded-full bg-green-600 opacity-50" />
@@ -52,7 +52,7 @@ const Testimonial = () => {
         </h2>
 
         {/* Slider */}
-        <div className="mt-8">
+        <div className="mt-8 ">
           <Slider {...settings}>
             {testimonials.map((item, index) => (
               <blockquote key={index} className="px-4 sm:px-6">
