@@ -1,10 +1,10 @@
 import React, { memo } from 'react';
 
 // --- ASSETS ---
-import horseImg from '../assets/horse.png';
-import tea1 from '../assets/tea1.jpg';
-import tea2 from '../assets/tea2.jpg';
-import tea3 from '../assets/tea3.jpg';
+import horseImg from '../assets/gallery/horse.png';
+import tea1 from '../assets/gallery/tea1.jpg';
+import tea2 from '../assets/gallery/tea2.jpg';
+import tea3 from '../assets/gallery/tea3.jpg';
 import read_more from '../assets/read_more.png';
 
 const galleryImages = [
@@ -23,9 +23,9 @@ const Gallery = () => {
         <section id="gallery" className="relative w-full font-[contentFont] bg-[#16B89F] py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 overflow-visible">
 
             {/* --- HEADER --- */}
-            <div className="flex w-full justify-center items-center gap-4 mb-8 md:mb-12 text-4xl md:text-5xl drop-shadow-md">
+            <div className="flex w-full justify-center items-center gap-2 mb-8 md:mb-12 text-4xl md:text-5xl drop-shadow-md">
                 <img
-                    className="w-16 sm:w-20 lg:w-24"
+                    className="w-20 md:w-24 lg:w-32 rotate-6"
                     src={horseImg}
                     alt="Decorative horse illustration"
                     loading="lazy"
@@ -37,7 +37,7 @@ const Gallery = () => {
                 </h2>
 
                 <img
-                    className="w-16 sm:w-20 lg:w-24 scale-x-[-1]"
+                    className="w-20 md:w-24 lg:w-32 -rotate-6 scale-x-[-1]"
                     src={horseImg}
                     alt="Decorative horse illustration (mirrored)"
                     loading="lazy"
@@ -91,7 +91,7 @@ const Gallery = () => {
                     src={horseImg}
                     alt=""
                     aria-hidden="true"
-                    className="w-28 sm:w-36 lg:w-[35vh] scale-x-[-1] -rotate-[10deg]"
+                    className="w-32 md:w-36 lg:w-[35vh] scale-x-[-1] -rotate-[10deg]"
                     loading="lazy"
                     decoding="async"
                 />

@@ -11,7 +11,7 @@ import Contact from './page/Contact'
 
 const App = () => {
   return (
-    <div>
+    <div className='overflow-x-hidden'>
       <Home />
       <About />
       <WhyUs />

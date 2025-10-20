@@ -1,19 +1,19 @@
 import React from 'react';
 
-import chiliLemonImg from '../assets/chilli.png';
-import busImg from '../assets/bus.png';
+import chiliLemonImg from '../assets/about/chilli.png';
+import busImg from '../assets/about/bus.png';
 import read_more from '../assets/read_more.png';
 
 const About = () => {
   return (
-    <section id="about" className="relative w-full font-[contentFont] bg-[#FFE208] py-12 md:py-20 px-4 sm:px-6 lg:px-8 overflow-y-visible">
+    <section id="about" className="relative w-full font-[contentFont] bg-[#FFE208] pt-6 pb-12 md:py-20 px-4 sm:px-6 lg:px-8 overflow-y-visible">
       <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
         {/* Left Image */}
         <div className="md:col-span-4 flex justify-center">
           <img
             src={chiliLemonImg}
             alt="Illustration of chilies and a lemon"
-            className="w-[30vw] md:w-60 lg:w-70  rotate-[-5deg] drop-shadow-md transition-transform duration-300 hover:scale-105"
+            className="w-[30vw] md:w-60 lg:w-80 drop-shadow-md transition-transform duration-300 hover:scale-105"
             loading="lazy"
           />
         </div>

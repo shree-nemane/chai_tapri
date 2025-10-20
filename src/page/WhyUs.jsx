@@ -1,10 +1,10 @@
 import React from 'react';
 
 import trumpetImg from '../assets/trumpet.png';
-import trophyIcon from '../assets/trophy_final.png';
-import ribbonIcon from '../assets/trophy_final.png';
-import starIcon from '../assets/trophy_final.png';
-import heartIcon from '../assets/trophy_final.png';
+import trophyIcon from '../assets/whyus/medal.png';
+import ribbonIcon from '../assets/whyus/medal.png';
+import starIcon from '../assets/whyus/star.png';
+import heartIcon from '../assets/whyus/medal.png';
 
 const whyUsItems = [
   { icon: trophyIcon, text: 'Award Winning' },

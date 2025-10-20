@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import autoRickshawBottom from '../assets/rickshaw.png';
-import hornPleaseLogo from '../assets/horn_ok_plz.png';
-import sendKeyIcon from '../assets/send_it.png';
+import autoRickshawBottom from '../assets/contact/rickshaw.png';
+import hornPleaseLogo from '../assets/contact/horn_ok_plz.png';
+import sendKeyIcon from '../assets/contact/send_it.png';
 
 // Form input component
 const FormInput = ({ label, type = 'text', fullWidth = false, isTextarea = false }) => (
@@ -65,12 +65,12 @@ const Contact = () => {
             <FormInput label="Message :" isTextarea fullWidth />
 
             {/* Send Button */}
-            <div className="col-span-2 flex justify-center">
+            <div className="col-span-2 flex justify-center border-2 border-white mx-auto rounded-2xl bg-yellow-400 hover:border-yellow-400 transition-transform">
               <button type="submit" className="cursor-pointer hover:scale-105 transition-transform">
                 <img
                   src={sendKeyIcon}
                   alt="Send Icon"
-                  className="w-36 sm:w-44 md:w-48"
+                  className="w-32 md:w-32"
                 />
               </button>
             </div>
@@ -87,7 +87,7 @@ const Contact = () => {
         )}
 
         {/* Contact Info Section */}
-        <div className="flex flex-col md:flex-row items-center justify-center md:items-end md:justify-between space-y-8 md:space-y-0 md:space-x-4 mt-16 mb-12">
+        <div className=" flex flex-col md:flex-row items-center justify-center md:items-end md:justify-between space-y-8 md:space-y-0 md:space-x-4 my-6 md:my-12 ">
 
           {/* Horn Please Logo */}
           <img
@@ -97,7 +97,7 @@ const Contact = () => {
           />
 
           {/* Central Contact Info */}
-          <div className="flex flex-col items-center text-center flex-grow">
+          <div className="flex flex-col items-center text-center flex-grow ">
 
             {/* Address */}
             <div className="flex flex-col items-center justify-center text-white max-w-sm">
@@ -110,8 +110,7 @@ const Contact = () => {
             </div>
 
             {/* Email & Phone */}
-            <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-12 my-6">
-
+            <div className="flex flex-row justify-center  gap-10 sm:space-y-0 sm:space-x-12 my-6">
               {/* Email */}
               <div className="flex flex-col items-center text-center">
                 <div className="text-white text-3xl mx-auto mb-2">
@@ -146,7 +145,7 @@ const Contact = () => {
           <img
             src={autoRickshawBottom}
             alt="Cartoon Auto Rickshaw Bottom"
-            className="w-32 sm:w-36 md:w-48 relative z-10"
+            className="w-32 sm:w-40 md:w-56 relative z-10"
           />
         </div>
       </div>

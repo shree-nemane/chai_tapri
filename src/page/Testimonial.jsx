@@ -1,6 +1,6 @@
 import React from 'react';
 import Slider from 'react-slick';
-import truckImg from '../assets/truck.png';
+import truckImg from '../assets/testimonial/truck.png';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -35,7 +35,7 @@ const Testimonial = () => {
   };
 
   return (
-    <section className="relative w-full overflow-visible pt-8 font-[contentFont] bg-[#4EB73E] font-heading text-white">
+    <section className="relative w-full overflow-visible h-[60vh] pt-8 font-[contentFont] bg-[#4EB73E] font-heading text-white">
       {/* Decorative Shapes */}
       <div className="absolute top-24 left-36 z-0 hidden sm:block">
         <div className="h-32 w-32 rounded-full bg-green-600 opacity-50" />
@@ -73,7 +73,7 @@ const Testimonial = () => {
         <img
           src={truckImg}
           alt="Illustration of a red bus"
-          className="w-32 md:w-48 max-w-[25vh]"
+          className="w-32 md:w-48 lg:w-[15vw]"
           loading="lazy"
         />
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 // --- ASSETS ---
-import paintedKettleImg from '../assets/kettle.png';
+import paintedKettleImg from '../assets/makemytea/kettle.png';
 import read_more from '../assets/read_more.png';
 
 const MakeMyTea = () => {
