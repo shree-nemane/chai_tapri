@@ -52,7 +52,7 @@ const Testimonial = () => {
         </h2>
 
         {/* Slider */}
-        <div className="mt-8">
+        <div className="mt-8 ">
           <Slider {...settings}>
             {testimonials.map((item, index) => (
               <blockquote key={index} className="px-4 sm:px-6">

@@ -18,7 +18,7 @@ const Header = ({ logo }) => {
         className="relative w-full md:w-auto bg-bottom bg-cover text-white rounded-md"
         style={{ backgroundImage: `url(${wood_texture})` }}
       >
-        <div className="absolute inset-0 bg-black/10 " />
+        <div className="absolute inset-0 bg-black/10 pointer-events-none" />
         {/* Navigation (Visible on md and larger screens) */}
         <nav className="hidden lg:min-w-[60vw] md:flex justify-evenly items-center gap-4 sm:gap-6 lg:gap-10 p-3 px-6 sm:px-8 text-white shadow-md rounded-md">
           {navLinks.map((link) => (
