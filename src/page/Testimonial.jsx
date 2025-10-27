@@ -4,19 +4,19 @@ import truckImg from '../assets/testimonial/Truck.png';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-// Sample testimonials array
+
 const testimonials = [
   {
-    quote: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    author: "Sandra John",
+    quote: "Feels just like my college tapri — but cleaner and cooler!",
+    author: "Rohan M.",
   },
   {
-    quote: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    author: "Michael Smith",
+    quote: "The best masala chai I’ve ever had. Takes me home instantly.",
+    author: "Sneha K.",
   },
   {
-    quote: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-    author: "Emma Watson",
+    quote: "Perfect hangout spot. Great tea, great vibes!",
+    author: "Amit S.",
   },
 ];
 
@@ -50,16 +50,17 @@ const Testimonial = () => {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-[headerFont] tracking-wider">
           TESTIMONIAL
         </h2>
+        <hr className="w-2/5 mx-auto mt-6 mb-8 border-t-2 border-gray-300" />
 
         {/* Slider */}
-        <div className="mt-8 ">
+        <div className="mt-8 font-[contentFont]">
           <Slider {...settings}>
             {testimonials.map((item, index) => (
               <blockquote key={index} className="px-4 sm:px-6">
-                <p className="text-lg sm:text-xl md:text-2xl leading-relaxed">
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed">
                   "{item.quote}"
                 </p>
-                <footer className="mt-4 sm:mt-6 text-lg sm:text-xl text-right">
+                <footer className="mt-4 sm:mt-6  text-xl lg:text-2xl text-right">
                   - {item.author}
                 </footer>
               </blockquote>

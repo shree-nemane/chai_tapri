@@ -1,11 +1,11 @@
-import React, { memo } from 'react';
+import React, { useState, memo } from 'react';
 
 // --- ASSETS ---
 import horseImg from '../assets/gallery/horse.png';
 import tea1 from '../assets/gallery/tea1.jpg';
 import tea2 from '../assets/gallery/tea2.jpg';
 import tea3 from '../assets/gallery/tea3.jpg';
-import read_more from '../assets/read_more.png';
+import read_more_img from '../assets/read_more.png'; 
 
 const galleryImages = [
     { id: 1, src: tea1, alt: 'A modern tea shop interior' },
@@ -19,11 +19,27 @@ const galleryImages = [
 ];
 
 const Gallery = () => {
+    // 2. Initialize state to track if the extra content is visible
+    const [isExpanded, setIsExpanded] = useState(false);
+
+    // 3. Handler function to toggle the state
+    const toggleContent = (e) => {
+        e.preventDefault(); // Prevent default link behavior
+        setIsExpanded(!isExpanded);
+    };
+
+    // 4. Content to display when expanded
+    const expandedTextContent = (
+        <p className="mt-8 text-white text-center text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed">
+            This gallery is a visual journey showcasing the essence of Chai Tapri, from the raw, authentic street-side inspiration to the cozy, hygienic setting of our cafes. We capture the rich, aromatic process of tea brewing, the vibrant colors of our spaces, and the genuine smiles of our staff and customers. It’s a testament to our mission: serving tradition with a touch of modern comfort.
+        </p>
+    );
+
     return (
         <section id="gallery" className="relative w-full font-[contentFont] bg-[#16B89F] py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-8 overflow-visible">
 
             {/* --- HEADER --- */}
-            <div className="flex w-full justify-center items-center gap-2 mb-8 md:mb-12 text-4xl md:text-5xl drop-shadow-md">
+            <div className="flex w-full justify-center items-center gap-2 mb-8 md:mb-10 text-4xl md:text-5xl drop-shadow-md">
                 <img
                     className="w-20 md:w-24 lg:w-32 rotate-6"
                     src={horseImg}
@@ -48,7 +64,7 @@ const Gallery = () => {
             {/* --- GALLERY GRID --- */}
             <div
                 role="list"
-                className="container mx-auto max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4"
+                className="container mx-auto max-w-6xl grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 sm:gap-4 " // Added margin top to separate from text
             >
                 {galleryImages.map((image) => (
                     <div
@@ -68,21 +84,38 @@ const Gallery = () => {
                 ))}
             </div>
 
-            {/* --- READ MORE LINK --- */}
-            <div className="flex justify-end">
-                <a
-                    href="#"
-                    aria-label="View more gallery items"
-                    className="inline-flex items-center mt-8 md:mt-10 drop-shadow-md pr-4"
-                >
-                    <img
-                        src={read_more}
-                        alt="Read more icon"
-                        className="w-36 sm:w-48"
-                        loading="lazy"
-                        decoding="async"
-                    />
-                </a>
+            {/* 5. Conditionally render the text content before the button */}
+            {isExpanded && expandedTextContent}
+
+            {/* --- READ MORE / SHOW LESS BUTTONS --- */}
+            <div className="flex justify-center md:justify-end">
+                {/* Display 'Read More' button (text and image) when collapsed */}
+                {!isExpanded && (
+                    <button
+                        onClick={toggleContent}
+                        aria-label="Read More gallery description"
+                        className="inline-flex items-center mt-8 md:mt-10 drop-shadow-md pr-4 group focus:outline-none"
+                    >
+                        <img
+                            src={read_more_img}
+                            alt="Read More icon"
+                            className="w-36 sm:w-48 drop-shadow-sm group-hover:scale-[1.03] transition-transform duration-200"
+                            loading="lazy"
+                            decoding="async"
+                        />
+                    </button>
+                )}
+
+                {/* Display 'Show Less' button (text only) when expanded */}
+                {isExpanded && (
+                    <button
+                        onClick={toggleContent}
+                        className="mt-8 md:mt-10 text-lg sm:text-xl md:text-2xl font-semibold text-white hover:text-white/90 transition-colors duration-200 focus:outline-none underline"
+                        aria-label="Show Less gallery description"
+                    >
+                        Show Less
+                    </button>
+                )}
             </div>
 
             {/* --- DECORATIVE HORSE (BOTTOM LEFT) --- */}
