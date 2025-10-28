@@ -14,8 +14,7 @@ const Home = () => {
       className="relative w-full min-h-screen bg-cover bg-center text-white overflow-hidden"
       style={{ backgroundImage: `url(${brickWallimg})` }}
     >
-      {/* Overlay for improved readability */}
-      <div className="absolute inset-0 bg-black/20 " />
+   
 
       <div className="relative z-10 flex flex-col min-h-screen">
         {/* Header */}

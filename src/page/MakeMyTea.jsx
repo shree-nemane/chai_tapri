@@ -42,7 +42,7 @@ Come, taste the tea that made Nashik fall in love again!`;
             MAKE MY TEA
           </h2>
 
-          <p className="font-heading text-md md:text-lg lg:text-2xl leading-relaxed md:leading-loose max-w-3xl text-white/90 whitespace-pre-line">
+          <p className="font-heading text-md md:text-lg lg:text-2xl tracking-wide leading-relaxed md:leading-loose max-w-3xl text-white/90 whitespace-pre-line">
             {introText} {/* Display dynamic text */}
           </p>
 

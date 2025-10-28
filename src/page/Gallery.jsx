@@ -2,20 +2,27 @@ import React, { useState, memo } from 'react';
 
 // --- ASSETS ---
 import horseImg from '../assets/gallery/horse.png';
-import tea1 from '../assets/gallery/tea1.jpg';
-import tea2 from '../assets/gallery/tea2.jpg';
-import tea3 from '../assets/gallery/tea3.jpg';
+import img1 from '../assets/gallery/img_1.jpg';
+import img2 from '../assets/gallery/img_2.jpg';
+import img3 from '../assets/gallery/img_3.jpg';
+import img4 from '../assets/gallery/img_4.jpg';
+import img5 from '../assets/gallery/img_5.jpg';
+import img6 from '../assets/gallery/img_6.jpg';
+import img7 from '../assets/gallery/img_7.jpg';
+import img8 from '../assets/gallery/img_8.jpg';
+
+
 import read_more_img from '../assets/read_more.png'; 
 
 const galleryImages = [
-    { id: 1, src: tea1, alt: 'A modern tea shop interior' },
-    { id: 2, src: tea2, alt: 'Steaming tea being prepared in a pan' },
-    { id: 3, src: tea3, alt: 'Close-up of traditional tea glasses' },
-    { id: 4, src: tea1, alt: 'A street-side tea stall with a vendor' },
-    { id: 5, src: tea2, alt: 'Classic metal teapots on a shelf' },
-    { id: 6, src: tea3, alt: 'Old-fashioned kettles for brewing tea' },
-    { id: 7, src: tea1, alt: 'A metal rack holding multiple tea glasses' },
-    { id: 8, src: tea2, alt: 'Pouring tea through a strainer into a cup' },
+    { id: 1, src: img1, alt: 'A modern tea shop interior' },
+    { id: 2, src: img2, alt: 'Steaming tea being prepared in a pan' },
+    { id: 3, src: img3, alt: 'Close-up of traditional tea glasses' },
+    { id: 4, src: img4, alt: 'A street-side tea stall with a vendor' },
+    { id: 5, src: img5, alt: 'Classic metal teapots on a shelf' },
+    { id: 6, src: img6, alt: 'Old-fashioned kettles for brewing tea' },
+    { id: 7, src: img7, alt: 'A metal rack holding multiple tea glasses' },
+    { id: 8, src: img8, alt: 'Pouring tea through a strainer into a cup' },
 ];
 
 const Gallery = () => {

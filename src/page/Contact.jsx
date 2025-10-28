@@ -87,20 +87,20 @@ const Contact = () => {
         )}
 
         {/* Contact Info Section */}
-        <div className=" flex flex-col md:flex-row items-center justify-center md:items-center md:justify-evenly space-y-8 md:space-y-0  my-6 md:my-12  ">
+        <div className=" flex flex-col md:flex-row items-center justify-center md:items-center md:justify-evenly space-y-8 md:space-y-0 md:my-12 ">
 
           {/* Horn Please Logo */}
           <img
             src={hornPleaseLogo}
             alt="Horn Please Logo"
-            className="w-32 sm:w-40 md:w-56 relative z-10 "
+            className="hidden md:block md:w-56 relative z-10 "
           />
 
           {/* Central Contact Info */}
           <div className="flex flex-col items-center justify-center text-center ">
             
             {/* Email & Phone */}
-            <div className="flex flex-col justify-center items-center gap-8 md:my-6 ">
+            <div className="flex md:flex-col justify-center items-center gap-10 md:gap-8 mt-10 md:mt-0 md:my-6 ">
               {/* Email */}
               <div className="flex flex-col justify-center items-center text-center">
                 <div className="text-white text-3xl mx-auto mb-2">
@@ -147,7 +147,7 @@ const Contact = () => {
           <img
             src={autoRickshawBottom}
             alt="Cartoon Auto Rickshaw Bottom"
-            className="w-32 sm:w-40 md:w-56 relative z-10 "
+            className="hidden md:block md:w-56 relative z-10 "
           />
         </div>
       </div>

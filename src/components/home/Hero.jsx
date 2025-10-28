@@ -10,7 +10,7 @@ const Hero = ({ chaiImage }) => {
         className="flex flex-col items-center md:items-start text-white font-[titleFont] drop-shadow-lg"
       >
         <h1 
-        className="font-bold tracking-wide leading-[24vw] md:leading-28 lg:leading-none text-[20vw] md:text-[14vw] lg:text-[12vw] opacity-70"
+        className="font-bold tracking-wide leading-[24vw] md:leading-28 lg:leading-none text-[20vw] md:text-[14vw] lg:text-[12vw] opacity-85"
         >
           <span className="block">Chai से</span>
           <span className="block mt-0 md:mt-4 lg:mt-6">SHuRuaat</span>

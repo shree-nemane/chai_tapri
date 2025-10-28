@@ -33,7 +33,7 @@ const About = () => {
             ABOUT US
           </h2>
 
-          <p className="mt-4 text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+          <p className="mt-4 text-md md:text-2xl text-gray-700 leading-relaxed tracking-wide">
             India runs on chai — and we’re here to keep it brewing!
             At Chai Tapri, we’ve recreated the true charm of India’s favorite roadside tea stall — with a twist of comfort, hygiene, and style.
             <br />
@@ -45,7 +45,7 @@ const About = () => {
           {/* 4. Conditionally rendered content */}
           {isExpanded && (
             <div className="mt-4 pt-4 border-t border-gray-600/30">
-              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed">
+              <p className="text-lg sm:text-xl md:text-2xl text-gray-700 leading-relaxed tracking-wide">
                 India is one of the largest tea-drinking nations in the world, and for us, chai is more than a beverage — it’s an emotion. From a morning cutting chai to late-night tapri talks, tea binds our hearts and stories together.
                 Chai Tapri was created to capture that very emotion — a place where people from every walk of life can come together over a cup of freshly brewed tea.
                 We’re a café-style quick service restaurant, serving different types of teas and tea-time snacks in a cozy yet desi setting. Our mission is simple — bring back the soul of Indian tapris, but with hygiene, quality, and comfort.

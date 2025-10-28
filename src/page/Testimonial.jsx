@@ -57,10 +57,10 @@ const Testimonial = () => {
           <Slider {...settings}>
             {testimonials.map((item, index) => (
               <blockquote key={index} className="px-4 sm:px-6">
-                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed">
+                <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl leading-relaxed tracking-wide">
                   "{item.quote}"
                 </p>
-                <footer className="mt-4 sm:mt-6  text-xl lg:text-2xl text-right">
+                <footer className="mt-4 sm:mt-6 tracking-wide text-xl lg:text-2xl text-right">
                   - {item.author}
                 </footer>
               </blockquote>
