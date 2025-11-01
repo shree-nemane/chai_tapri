@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import trumpetImg from "../assets/trumpet.png";
-import trophyIcon from "../assets/whyus/trophyIcon.PNG";
-import ribbonIcon from "../assets/whyus/ribbonIcon.PNG";
-import starIcon from "../assets/whyus/starIcon.PNG";
-import heartIcon from "../assets/whyus/heartIcon.PNG";
+import trophyIcon from "../assets/whyus/trophyIcon.jpg";
+import ribbonIcon from "../assets/whyus/ribbonIcon.jpg";
+import starIcon from "../assets/whyus/starIcon.jpg";
+import heartIcon from "../assets/whyus/heartIcon.jpg";
 
 const whyUsItems = [
   { icon: trophyIcon, text: "Authentic Taste" },
@@ -99,7 +99,7 @@ const WhyUs = () => {
                 <img
                   src={item.icon}
                   alt={item.text}
-                  className="w-full h-full object-contain drop-shadow-lg group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-full object-contain  group-hover:scale-105 transition-transform duration-300"
                 />
 
               </motion.div>
