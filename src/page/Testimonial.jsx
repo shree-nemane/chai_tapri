@@ -1,9 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
+import { motion } from 'framer-motion';
 import truckImg from '../assets/testimonial/Truck.png';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
 
 const testimonials = [
   {
@@ -46,14 +46,27 @@ const Testimonial = () => {
 
       {/* Content Wrapper */}
       <div className="container relative z-10 mx-auto max-w-4xl px-4 py-16 md:py-24 text-center">
-        {/* Title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-[headerFont] tracking-wider">
+        {/* Animated Title */}
+        <motion.h2
+          initial={{ opacity: 0, y: -30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: 'easeOut' }}
+          viewport={{ once: true }}
+          className="text-3xl sm:text-4xl md:text-5xl font-[headerFont] tracking-wider"
+        >
           TESTIMONIAL
-        </h2>
+        </motion.h2>
+
         <hr className="w-2/5 mx-auto mt-6 mb-8 border-t-2 border-gray-300" />
 
-        {/* Slider */}
-        <div className="mt-8 font-[contentFont]">
+        {/* Animated Slider */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: 'easeOut', delay: 0.3 }}
+          viewport={{ once: true }}
+          className="mt-8 font-[contentFont]"
+        >
           <Slider {...settings}>
             {testimonials.map((item, index) => (
               <blockquote key={index} className="px-4 sm:px-6">
@@ -66,18 +79,24 @@ const Testimonial = () => {
               </blockquote>
             ))}
           </Slider>
-        </div>
+        </motion.div>
       </div>
 
-      {/* Decorative Truck */}
-      <div className="absolute right-2 md:right-12 bottom-0 transform translate-y-1/2 z-30 pointer-events-none">
+      {/* Animated Truck */}
+      <motion.div
+        initial={{ opacity: 0, x: 150 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        transition={{ duration: 1, ease: 'easeOut', delay: 0.4 }}
+        viewport={{ once: true }}
+        className="absolute right-2 md:right-12 bottom-0 transform translate-y-1/2 z-30 pointer-events-none"
+      >
         <img
           src={truckImg}
           alt="Illustration of a red bus"
           className="w-32 md:w-48 lg:w-[15vw]"
           loading="lazy"
         />
-      </div>
+      </motion.div>
     </section>
   );
 };
