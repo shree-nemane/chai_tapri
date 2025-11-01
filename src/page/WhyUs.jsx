@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 import trumpetImg from "../assets/trumpet.png";
-import trophyIcon from "../assets/whyus/trophyIcon.png";
-import ribbonIcon from "../assets/whyus/ribbonIcon.png";
-import starIcon from "../assets/whyus/starIcon.png";
-import heartIcon from "../assets/whyus/heartIcon.png";
+import trophyIcon from "../assets/whyus/trophyIcon.PNG";
+import ribbonIcon from "../assets/whyus/ribbonIcon.PNG";
+import starIcon from "../assets/whyus/starIcon.PNG";
+import heartIcon from "../assets/whyus/heartIcon.PNG";
 
 const whyUsItems = [
   { icon: trophyIcon, text: "Authentic Taste" },
