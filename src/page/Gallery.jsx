@@ -59,7 +59,7 @@ const Gallery = () => {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 20 }}
       transition={{ duration: 0.6 }}
-      className="mt-8 text-white text-center text-lg sm:text-xl md:text-2xl max-w-4xl mx-auto leading-relaxed"
+      className="mt-8 text-white text-center text-lg sm:text-xl md:text-xl lg:text-2xl max-w-4xl mx-auto leading-relaxed"
     >
       This gallery is a visual journey showcasing the essence of Chai Tapri, from the raw, authentic street-side inspiration to the cozy, hygienic setting of our cafes.
       We capture the rich, aromatic process of tea brewing, the vibrant colors of our spaces, and the genuine smiles of our staff and customers.

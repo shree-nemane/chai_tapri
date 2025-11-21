@@ -1,6 +1,5 @@
 import React from "react";
 
-// Import child components
 import Header from "../components/home/Header";
 import Hero from "../components/home/Hero";
 import brickWallimg from "../assets/home/brick_wall.jpg";

@@ -5,7 +5,7 @@ import autoRickshawBottom from '../assets/contact/rickshaw.png';
 import hornPleaseLogo from '../assets/contact/horn_ok_plz.png';
 import sendKeyIcon from '../assets/contact/send_it.png';
 
-const formUrl = "https://forms.gle/";
+const formUrl = "https://forms.gle/BazasdKYvWn5zRPYA";
 
 const openSecureWindow = (url) => {
   window.open(url, '_blank', 'noopener,noreferrer');
@@ -81,7 +81,7 @@ const Contact = () => {
           {!submitted ? (
             <form
               className="grid grid-cols-2 gap-x-4 sm:gap-x-8"
-              action="https://formspree.io/f/your-form-id"
+              action="https://formspree.io/f/mgvpjpje"
               method="POST"
               onSubmit={() => setSubmitted(true)}
             >
@@ -125,7 +125,7 @@ const Contact = () => {
             }}
             rel="noopener noreferrer"
             role="button"
-            className='text-xl md:text-2xl underline text-black/80 tracking-wide'
+            className='text-xl md:text-2xl underline text-white tracking-wide'
           >
             Want to be part of franchise ?
           </a>

@@ -1,9 +1,6 @@
 import React from 'react';
 import wood_texture from '../../assets/home/wood.jpg';
-import Logo from '../../assets/home/logo2.png';
 import Chai_tapri from '../../assets/home/chai_tapri_logo.png';
-
-import board from '../../assets/home/board00.png';
 
 // Navigation links
 const navLinks = [
@@ -37,7 +34,7 @@ const Header = () => {
         style={{ backgroundImage: `url(${wood_texture})` }}
       >
         <div className="absolute inset-0 bg-black/10 pointer-events-none" />
-        <nav className="hidden lg:min-w-[50vw] md:flex justify-evenly items-center gap-4 sm:gap-6 lg:gap-10 p-3 px-6 sm:px-8 text-white shadow-md rounded-md">
+        <nav className="hidden md:min-w-[50vw] md:flex justify-evenly items-center gap-4 sm:gap-6 lg:gap-10 p-3 px-6 sm:px-8 text-white shadow-md rounded-md">
           {navLinks.map((link) => (
             <a
               key={link.title}
@@ -54,7 +51,7 @@ const Header = () => {
       {/* Board Image */}
       <div className="absolute right-2 sm:right-4 md:right-12 top-0 p-2 md:p-0 md:-top-4 transform md:translate-y-1/10 z-10">
         <img
-          className="w-32  sm:w-40 md:w-48 lg:w-56 xl:w-64 object-contain opacity-90"
+          className="w-36 md:w-52 lg:w-56 xl:w-64 object-contain opacity-90"
           src={Chai_tapri}
           alt=""
         />

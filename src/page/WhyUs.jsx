@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-import trumpetImg from "../assets/trumpet.png";
+import trumpetImg from "../assets/whyus/trumpet.png";
 import trophyIcon from "../assets/whyus/trophyIcon.jpg";
 import ribbonIcon from "../assets/whyus/ribbonIcon.jpg";
 import starIcon from "../assets/whyus/starIcon.jpg";

@@ -39,10 +39,10 @@ const About = () => {
       id="about"
       className="relative w-full font-[contentFont] bg-[#FFE208] pt-6 pb-12 md:py-20 px-4 sm:px-6 lg:px-8 overflow-y-visible"
     >
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-12 lg:gap-8 items-center justify-center md:justify-start">
         {/* --- LEFT IMAGE (Floating + Scroll Reveal) --- */}
         <motion.div
-          className="md:col-span-4 flex justify-center"
+          className="md:col-span-4 flex justify-center md:justify-start md:items-start"
           initial={{ opacity: 0, x: -60 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
@@ -53,7 +53,7 @@ const About = () => {
             alt="Illustration of chilies and a lemon"
             animate={{ y: [0, -5, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="w-[30vw] md:w-60 lg:w-80 drop-shadow-md"
+            className="w-[30vw] md:w-60 lg:w-96 drop-shadow-md"
           />
         </motion.div>
 
@@ -69,7 +69,7 @@ const About = () => {
             ABOUT US
           </h2>
 
-          <p className="mt-4 text-md md:text-2xl text-gray-700 leading-relaxed tracking-wide">
+          <p className="mt-4 text-md md:text-xl lg:text-2xl text-gray-700 leading-relaxed tracking-wide">
             India runs on chai — and we’re here to keep it brewing!
             At Chai Tapri, we’ve recreated the true charm of India’s favorite roadside tea stall — 
             with a twist of comfort, hygiene, and style.
