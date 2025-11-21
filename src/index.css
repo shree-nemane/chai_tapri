@@ -6,11 +6,11 @@
 }
 
 @font-face {
-    font-family: titleFont;
-    src: url(../public/fonts/CALVINN.TTF);
+    font-family: headerFont;
+    src: url(../public/fonts/DESYREL.ttf);
 }
 
 @font-face {
-    font-family: headerFont;
-    src: url(../public/fonts/DESYREL.ttf);
+    font-family: mainFont;
+    src: url(../public/fonts/edosz.ttf);
 }
